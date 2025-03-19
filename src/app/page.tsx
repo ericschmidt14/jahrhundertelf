@@ -9,10 +9,12 @@ import decades from "./data/players.json";
 
 export default function Home() {
   const [activeStep, setActiveStep] = useState(0);
+  const [isGoingForward, setIsGoingForward] = useState(true);
   const [selectedPlayers, setSelectedPlayers] = useState<string[]>([]);
 
   const handleSelectPlayer = (decade: number, playerName: string) => {
     setSelectedPlayers((prev) => ({ ...prev, [decade]: playerName }));
+    setIsGoingForward(true);
     setTimeout(() => setActiveStep((prev) => prev + 1), 500);
   };
 
@@ -47,9 +49,9 @@ export default function Home() {
                 {activeStep === index && (
                   <motion.div
                     key={decade.year}
-                    initial={{ opacity: 0, x: 50 }}
+                    initial={{ opacity: 0, x: isGoingForward ? 50 : -50 }}
                     animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -50 }}
+                    exit={{ opacity: 0, x: isGoingForward ? -50 : 50 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="flex flex-col gap-8"
                   >
@@ -96,7 +98,10 @@ export default function Home() {
                       <Button
                         variant="transparent"
                         leftSection={<IconChevronLeft size={16} />}
-                        onClick={() => setActiveStep(activeStep - 1)}
+                        onClick={() => {
+                          setIsGoingForward(false);
+                          setTimeout(() => setActiveStep(activeStep - 1), 100);
+                        }}
                       >
                         Zurück
                       </Button>
