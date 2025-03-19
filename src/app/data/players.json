@@ -1,0 +1,44 @@
+[
+  {
+    "year": 1900,
+    "players": [
+      {
+        "name": "Max Morlock"
+      },
+      {
+        "name": "Heinrich Stuhlfauth"
+      },
+      {
+        "name": "Thomas Brunner"
+      }
+    ]
+  },
+  {
+    "year": 1920,
+    "players": [
+      {
+        "name": "Heinz Strehl"
+      },
+      {
+        "name": "Dieter Eckstein"
+      },
+      {
+        "name": "Horst Leupold"
+      }
+    ]
+  },
+  {
+    "year": 2000,
+    "players": [
+      {
+        "name": "Javier Pinola"
+      },
+      {
+        "name": "Andreas Köpke"
+      },
+      {
+        "name": "Marek Mintál"
+      }
+    ]
+  }
+]
