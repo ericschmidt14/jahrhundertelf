@@ -120,7 +120,7 @@ export default function Home() {
             >
               <Stepper.Step>
                 <div className="max-w-[480px] m-auto flex flex-col gap-8 p-8">
-                  <h2 className="text-4xl font-bold text-center">
+                  <h2 className="text-2xl md:text-4xl font-bold text-center">
                     Liebes Club-Mitglied,
                   </h2>
                   <p>
@@ -160,10 +160,10 @@ export default function Home() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="flex flex-col gap-8"
                     >
-                      <i className="text-8xl text-center dimmed">
+                      <i className="text-4xl md:text-8xl text-center dimmed">
                         {getDecade(decade.year)}
                       </i>
-                      <div className="grid grid-cols-3 gap-4">
+                      <div className="grid sm:grid-cols-3 gap-4">
                         {decade.players.map((player) => {
                           const isSelected =
                             selectedPlayers[decade.year] === player.name;
@@ -183,7 +183,7 @@ export default function Home() {
                                 handleSelectPlayer(decade.year, player.name)
                               }
                             >
-                              <div className="relative w-full aspect-square overflow-hidden">
+                              <div className="relative w-full aspect-video sm:aspect-square overflow-hidden">
                                 <Image
                                   alt={`Bild ${player.name}`}
                                   src="/players/1.png"
@@ -192,7 +192,7 @@ export default function Home() {
                                   className="transition-transform duration-300 group-hover:scale-105"
                                 />
                               </div>
-                              <h3 className="text-xl text-center p-4">
+                              <h3 className="sm:text-xl text-center p-4">
                                 {player.name}
                               </h3>
                             </div>
