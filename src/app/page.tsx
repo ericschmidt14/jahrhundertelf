@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/legacy/image";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import Logo from "./components/logo";
 import StepperIndicator from "./components/stepper";
 import decades from "./data/players.json";
 import { getDecade } from "./lib/utils";
@@ -237,17 +238,7 @@ export default function Home() {
     <div className="flex flex-col items-center p-8">
       <div className="w-full max-w-[1440px] mx-auto">
         <header className="flex justify-center items-center gap-4">
-          <div className="flex items-center gap-1">
-            <Image
-              src="/logo_transparent.svg"
-              width={48}
-              height={48}
-              alt="1. FCN Logo"
-            />
-            <h1 className="text-2xl">
-              Jahrhundert<i>Elf</i>
-            </h1>
-          </div>
+          <Logo />
         </header>
         {renderContent()}
       </div>

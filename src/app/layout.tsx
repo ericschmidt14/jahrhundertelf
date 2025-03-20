@@ -1,6 +1,7 @@
 import { createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Footer from "./components/footer";
 import "./globals.css";
 
@@ -39,10 +40,12 @@ export default function RootLayout({
     <html lang="de">
       <body>
         <MantineProvider theme={theme} defaultColorScheme="dark">
-          <main className="relative z-10 min-h-screen flex flex-col justify-between bg-[length:300%_300%] bg-gradient-to-r from-[#b3193e] via-[#aa1124] via-30% to-[#220407] bg-right">
-            {children}
-            <Footer />
-          </main>
+          <Suspense>
+            <main className="relative z-10 min-h-screen flex flex-col justify-between bg-[length:300%_300%] bg-gradient-to-r from-[#b3193e] via-[#aa1124] via-30% to-[#220407] bg-right">
+              {children}
+              <Footer />
+            </main>
+          </Suspense>
         </MantineProvider>
       </body>
     </html>
