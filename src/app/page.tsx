@@ -6,6 +6,7 @@ import Image from "next/legacy/image";
 import { useState } from "react";
 import StepperIndicator from "./components/stepper";
 import decades from "./data/players.json";
+import { getDecade } from "./lib/utils";
 
 export default function Home() {
   const [activeStep, setActiveStep] = useState(0);
@@ -62,7 +63,7 @@ export default function Home() {
                       className="flex flex-col gap-8"
                     >
                       <i className="text-8xl text-center dimmed">
-                        {decade.year} – {decade.year + 9}
+                        {getDecade(decade.year)}
                       </i>
                       <div className="grid grid-cols-3 gap-4">
                         {decade.players.map((player) => {
@@ -119,10 +120,11 @@ export default function Home() {
           {activeStep === decades.length && (
             <div className="max-w-[400px] m-auto flex flex-col gap-8 p-8">
               <h2 className="text-4xl font-bold text-center">Deine Auswahl</h2>
-              <ul className="flex flex-col items-center">
+              <ul className="flex flex-col items-center gap-4">
                 {Object.entries(selectedPlayers).map(([decade, player]) => (
-                  <li key={decade}>
-                    <b>{decade}</b> {player}
+                  <li key={decade} className="flex flex-col items-center">
+                    <i className="dimmed">{getDecade(+decade)}</i>
+                    <h3 className="text-xl">{player}</h3>
                   </li>
                 ))}
               </ul>

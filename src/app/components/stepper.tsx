@@ -14,7 +14,7 @@ export default function StepperIndicator({
         height: "2px",
         overflow: "hidden",
         position: "fixed",
-        backgroundColor: "var(--mantine-color-dark-4)",
+        backgroundColor: "rgba(255, 255, 255, 0.2)",
         top: "0",
         left: "0",
         zIndex: "1000",
