@@ -3,13 +3,13 @@
     "year": 1900,
     "players": [
       {
-        "name": "Max Morlock"
+        "name": "Player A"
       },
       {
-        "name": "Heinrich Stuhlfauth"
+        "name": "Player B"
       },
       {
-        "name": "Thomas Brunner"
+        "name": "Player C"
       }
     ]
   },
@@ -17,13 +17,13 @@
     "year": 1920,
     "players": [
       {
-        "name": "Heinz Strehl"
+        "name": "Player D"
       },
       {
-        "name": "Dieter Eckstein"
+        "name": "Player E"
       },
       {
-        "name": "Horst Leupold"
+        "name": "Player F"
       }
     ]
   },
@@ -31,13 +31,13 @@
     "year": 2000,
     "players": [
       {
-        "name": "Javier Pinola"
+        "name": "Player G"
       },
       {
-        "name": "Andreas Köpke"
+        "name": "Player H"
       },
       {
-        "name": "Marek Mintál"
+        "name": "Player I"
       }
     ]
   }
