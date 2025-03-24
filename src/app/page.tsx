@@ -164,7 +164,7 @@ export default function Home() {
                       <i className="text-4xl md:text-8xl text-center dimmed">
                         {decade.year}er
                       </i>
-                      <div className="grid sm:grid-cols-3 gap-4">
+                      <div className="grid px-12 sm:px-0 sm:grid-cols-3 gap-4">
                         {decade.players.map((player) => {
                           const isSelected =
                             selectedPlayers[decade.year] === player.name;
@@ -184,7 +184,7 @@ export default function Home() {
                                 handleSelectPlayer(decade.year, player.name)
                               }
                             >
-                              <div className="relative w-full aspect-video sm:aspect-square overflow-hidden">
+                              <div className="relative w-full aspect-square overflow-hidden">
                                 <Image
                                   alt={`Bild ${player.name}`}
                                   src={`/players/${player.name}.jpg`}
@@ -211,20 +211,20 @@ export default function Home() {
                     Deine Auswahl
                   </h2>
                   <ul className="flex flex-col items-center gap-4">
-                    <li className="flex flex-col items-center">
-                      <i className="text-[var(--mantine-color-orange-9)]">
-                        Jahrhunderspieler
-                      </i>
-                      <h3 className="text-xl text-[var(--mantine-color-orange-6)]">
-                        Morlock
-                      </h3>
-                    </li>
                     {Object.entries(selectedPlayers).map(([decade, player]) => (
                       <li key={decade} className="flex flex-col items-center">
                         <i className="dimmed">{decade}er</i>
                         <h3 className="text-xl">{player}</h3>
                       </li>
                     ))}
+                    <li className="flex flex-col items-center">
+                      <i className="text-[var(--mantine-color-orange-9)]">
+                        Jahrhundertspieler
+                      </i>
+                      <h3 className="text-xl text-[var(--mantine-color-orange-6)]">
+                        Morlock
+                      </h3>
+                    </li>
                   </ul>
                   <div className="flex flex-col-reverse justify-center gap-2">
                     <BackButton />
