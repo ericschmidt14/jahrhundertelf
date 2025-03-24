@@ -3,12 +3,12 @@
     "year": 1920,
     "players": [
       {
-        "name": "Stuhlfauth",
-        "given": "Heinrich"
-      },
-      {
         "name": "Kalb",
         "given": "Hans"
+      },
+      {
+        "name": "Stuhlfauth",
+        "given": "Heinrich"
       },
       {
         "name": "Sutor",
@@ -58,12 +58,12 @@
         "given": "Roland"
       },
       {
-        "name": "Wenauer",
-        "given": "Ferdinand"
-      },
-      {
         "name": "Strehl",
         "given": "Heinz"
+      },
+      {
+        "name": "Wenauer",
+        "given": "Ferdinand"
       }
     ]
   },
@@ -88,12 +88,12 @@
     "year": 1970,
     "players": [
       {
-        "name": "Nüssing",
-        "given": "Dieter"
-      },
-      {
         "name": "Eder",
         "given": "Norbert"
+      },
+      {
+        "name": "Nüssing",
+        "given": "Dieter"
       },
       {
         "name": "Beierlorzer",
@@ -139,13 +139,14 @@
     "year": 2000,
     "players": [
       {
-        "name": "Wolf",
-        "given": "Andreas"
-      },
-      {
         "name": "Mintal",
         "given": "Marek"
       },
+      {
+        "name": "Wolf",
+        "given": "Andreas"
+      },
+
       {
         "name": "Schäfer",
         "given": "Raphael"

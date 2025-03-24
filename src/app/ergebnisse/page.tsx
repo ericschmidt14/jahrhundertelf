@@ -1,6 +1,6 @@
 "use client";
-import { Button, Pagination, Table, Tabs } from "@mantine/core";
-import { IconLogout, IconTrophy } from "@tabler/icons-react";
+import { Button, Pagination, Table, Tabs, TextInput } from "@mantine/core";
+import { IconLogout, IconSearch, IconTrophy } from "@tabler/icons-react";
 import { signOut, useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import Loader from "../components/loader";
@@ -16,6 +16,7 @@ export default function Page() {
     {}
   );
   const [page, setPage] = useState(1);
+  const [search, setSearch] = useState<string>("");
 
   const fetchData = () => {
     if (session) {
@@ -58,12 +59,24 @@ export default function Page() {
     return <Login />;
   }
 
+  const filteredResults =
+    results &&
+    results
+      .filter((r) => {
+        const keywords = search.toLowerCase().split(" ");
+
+        return keywords.every((keyword) =>
+          [r.token].some((value) => value.toLowerCase().includes(keyword))
+        );
+      })
+      .reverse();
+
   const pageLimit = 25;
   const pageSize = pageLimit ? +pageLimit : 25;
   const startIndex = (page - 1) * pageSize;
   const endIndex = startIndex + pageSize;
-  const currentPageData = results.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(results.length / pageSize);
+  const currentPageData = filteredResults.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(filteredResults.length / pageSize);
 
   return (
     <div className="flex flex-col items-center gap-4">
@@ -137,8 +150,22 @@ export default function Page() {
             </Table>
           </div>
         </Tabs.Panel>
+
         <Tabs.Panel value="details">
-          <div className="w-full flex flex-col gap-8 p-8">
+          <div className="w-full flex flex-col gap-4 p-8">
+            <TextInput
+              placeholder="Suchen ..."
+              leftSection={<IconSearch size={16} />}
+              rightSection={<p>{filteredResults.length}</p>}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              styles={{
+                input: {
+                  background: "rgba(0,0,0,0.2)",
+                  border: "1px solid rgb(66, 66, 66)",
+                },
+              }}
+            />
             <Table>
               <Table.Thead>
                 <Table.Tr>

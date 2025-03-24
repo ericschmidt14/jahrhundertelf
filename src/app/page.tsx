@@ -38,10 +38,19 @@ export default function Home() {
       });
   }, [token]);
 
+  const scrollToTop = () =>
+    setTimeout(() => {
+      const top = document.getElementById("top");
+      top?.scrollIntoView({ behavior: "smooth" });
+    }, 500);
+
   const handleSelectPlayer = (decade: number, playerName: string) => {
     setSelectedPlayers((prev) => ({ ...prev, [decade]: playerName }));
     setIsGoingForward(true);
-    setTimeout(() => setActiveStep((prev) => prev + 1), 500);
+    setTimeout(() => {
+      setActiveStep((prev) => prev + 1);
+      scrollToTop();
+    }, 500);
   };
 
   const handleSubmit = () => {
@@ -60,6 +69,7 @@ export default function Home() {
         onClick={() => {
           setIsGoingForward(false);
           setTimeout(() => setActiveStep(activeStep - 1), 100);
+          scrollToTop();
         }}
       >
         Zurück
@@ -249,7 +259,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center p-4 md:p-8">
+    <div id="top" className="flex flex-col items-center p-4 md:p-8">
       <div className="w-full max-w-[1440px] mx-auto">
         <header className="flex justify-center items-center gap-4">
           <Logo />
