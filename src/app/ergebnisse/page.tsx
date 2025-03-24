@@ -1,6 +1,6 @@
 "use client";
 import { Button, Pagination, Table } from "@mantine/core";
-import { IconLogout } from "@tabler/icons-react";
+import { IconLogout, IconTrophy } from "@tabler/icons-react";
 import { signOut, useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import Loader from "../components/loader";
@@ -8,7 +8,6 @@ import Login from "../components/login";
 import Logo from "../components/logo";
 import decades from "../data/players.json";
 import { Result } from "../lib/interfaces";
-import { getDecade } from "../lib/utils";
 
 export default function Page() {
   const { data: session, status } = useSession();
@@ -67,7 +66,7 @@ export default function Page() {
   const totalPages = Math.ceil(results.length / pageSize);
 
   return (
-    <div className="flex flex-col items-center gap-8">
+    <div className="flex flex-col items-center gap-4">
       <header className="w-full flex justify-between items-center px-8 py-2 bg-black/50">
         <Logo />
         <Button
@@ -79,15 +78,7 @@ export default function Page() {
         </Button>
       </header>
       <div className="w-full flex flex-col gap-8 p-8">
-        <Table>
-          <Table.Thead>
-            <Table.Tr>
-              <Table.Th>Jahrzehnt</Table.Th>
-              <Table.Th>Spieler</Table.Th>
-              <Table.Th />
-              <Table.Th />
-            </Table.Tr>
-          </Table.Thead>
+        <Table withRowBorders={false} verticalSpacing="md">
           <Table.Tbody>
             {decades.map(({ year, players }) => {
               const sortedPlayers = [...players].sort(
@@ -98,28 +89,37 @@ export default function Page() {
               return (
                 <Table.Tr key={year}>
                   <Table.Td>
-                    <i className="text-xl dimmed">{getDecade(year)}</i>
+                    <i className="text-xl dimmed">{year}</i>
                   </Table.Td>
                   {sortedPlayers.map(({ name }, index) => (
-                    <Table.Td key={name} className="text-center">
-                      <div className="flex flex-col items-start">
-                        <h3
-                          className={`text-xl ${
-                            index === 0 &&
-                            "text-[var(--mantine-color-orange-6)]"
-                          }`}
-                        >
-                          {name}
-                        </h3>
-                        <p
-                          className={`${
-                            index === 0
-                              ? "text-[var(--mantine-color-orange-9)]"
-                              : "dimmed"
-                          }`}
-                        >
-                          {playerCounts[name] || 0}x gewählt
-                        </p>
+                    <Table.Td key={name}>
+                      <div className="flex items-center gap-2">
+                        {index === 0 && (
+                          <IconTrophy
+                            size={64}
+                            stroke={1}
+                            color="var(--mantine-color-orange-9)"
+                          />
+                        )}
+                        <div className="flex flex-col items-start">
+                          <h3
+                            className={`text-xl ${
+                              index === 0 &&
+                              "text-[var(--mantine-color-orange-6)]"
+                            }`}
+                          >
+                            {name}
+                          </h3>
+                          <p
+                            className={`${
+                              index === 0
+                                ? "text-[var(--mantine-color-orange-9)]"
+                                : "dimmed"
+                            }`}
+                          >
+                            {playerCounts[name] || 0}x gewählt
+                          </p>
+                        </div>
                       </div>
                     </Table.Td>
                   ))}

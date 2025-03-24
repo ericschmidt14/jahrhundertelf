@@ -57,15 +57,6 @@ a:not(.logo):not(.mantine-Button-root):hover,
   cursor: pointer;
 }
 
-.small,
-article.small p {
-  font-size: var(
-    --input-description-size,
-    calc(var(--mantine-font-size-sm) - calc(0.125rem * var(--mantine-scale)))
-  );
-  line-height: 1.4;
-}
-
 .dimmed {
   color: var(--dimmed);
 }
