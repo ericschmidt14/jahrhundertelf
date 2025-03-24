@@ -3,13 +3,16 @@
     "year": 1920,
     "players": [
       {
-        "name": "Stuhlfauth"
+        "name": "Stuhlfauth",
+        "given": "Heinrich"
       },
       {
-        "name": "Kalb"
+        "name": "Kalb",
+        "given": "Hans"
       },
       {
-        "name": "Sutor"
+        "name": "Sutor",
+        "given": "Hans"
       }
     ]
   },
@@ -17,13 +20,16 @@
     "year": 1930,
     "players": [
       {
-        "name": "Übelein"
+        "name": "Uebelein",
+        "given": "Hans"
       },
       {
-        "name": "Billmann"
+        "name": "Billmann",
+        "given": "Willi"
       },
       {
-        "name": "Oehm"
+        "name": "Oehm",
+        "given": "Richard"
       }
     ]
   },
@@ -31,13 +37,16 @@
     "year": 1940,
     "players": [
       {
-        "name": "Kennemann"
+        "name": "Kennemann",
+        "given": "Georg"
       },
       {
-        "name": "Schaffer"
+        "name": "Schaffer",
+        "given": "Edi"
       },
       {
-        "name": "Gebhardt"
+        "name": "Gebhardt",
+        "given": "Robert"
       }
     ]
   },
@@ -45,13 +54,16 @@
     "year": 1950,
     "players": [
       {
-        "name": "Wabra"
+        "name": "Wabra",
+        "given": "Roland"
       },
       {
-        "name": "Wenauer"
+        "name": "Wenauer",
+        "given": "Ferdinand"
       },
       {
-        "name": "Strehl"
+        "name": "Strehl",
+        "given": "Heinz"
       }
     ]
   },
@@ -59,13 +71,16 @@
     "year": 1960,
     "players": [
       {
-        "name": "Müller"
+        "name": "Müller",
+        "given": "Ludwig"
       },
       {
-        "name": "Leupold"
+        "name": "Leupold",
+        "given": "Horst"
       },
       {
-        "name": "Volkert"
+        "name": "Volkert",
+        "given": "Georg"
       }
     ]
   },
@@ -73,13 +88,16 @@
     "year": 1970,
     "players": [
       {
-        "name": "Nüssing"
+        "name": "Nüssing",
+        "given": "Dieter"
       },
       {
-        "name": "Eder"
+        "name": "Eder",
+        "given": "Norbert"
       },
       {
-        "name": "Beierlorzer"
+        "name": "Beierlorzer",
+        "given": "Bertram"
       }
     ]
   },
@@ -87,13 +105,16 @@
     "year": 1980,
     "players": [
       {
-        "name": "Eckstein"
+        "name": "Eckstein",
+        "given": "Dieter"
       },
       {
-        "name": "Brunner"
+        "name": "Brunner",
+        "given": "Thomas"
       },
       {
-        "name": "Hintermaier"
+        "name": "Hintermaier",
+        "given": "Reinhold"
       }
     ]
   },
@@ -101,13 +122,16 @@
     "year": 1990,
     "players": [
       {
-        "name": "Köpke"
+        "name": "Köpke",
+        "given": "Andreas"
       },
       {
-        "name": "Wiesinger"
+        "name": "Wiesinger",
+        "given": "Michael"
       },
       {
-        "name": "Oechler"
+        "name": "Oechler",
+        "given": "Marc"
       }
     ]
   },
@@ -115,13 +139,16 @@
     "year": 2000,
     "players": [
       {
-        "name": "Wolf"
+        "name": "Wolf",
+        "given": "Andreas"
       },
       {
-        "name": "Mintal"
+        "name": "Mintal",
+        "given": "Marek"
       },
       {
-        "name": "Schäfer"
+        "name": "Schäfer",
+        "given": "Raphael"
       }
     ]
   },
@@ -129,13 +156,16 @@
     "year": 2010,
     "players": [
       {
-        "name": "Pinola"
+        "name": "Pinola",
+        "given": "Javier"
       },
       {
-        "name": "Behrens"
+        "name": "Behrens",
+        "given": "Hanno"
       },
       {
-        "name": "Valentini"
+        "name": "Valentini",
+        "given": "Enrico"
       }
     ]
   }

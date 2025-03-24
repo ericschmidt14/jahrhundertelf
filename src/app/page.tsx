@@ -119,24 +119,27 @@ export default function Home() {
               }}
             >
               <Stepper.Step>
-                <div className="max-w-[480px] m-auto flex flex-col gap-8 p-4 md:p-8">
-                  <h2 className="text-2xl md:text-4xl font-bold text-center">
+                <div className="max-w-[460px] m-auto flex flex-col gap-8 p-4 md:p-8">
+                  <h2 className="text-2xl md:text-4xl font-bold">
                     Liebes Club-Mitglied,
                   </h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                    nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua.
+                    Es gibt viel Clubs, aber nur einer ist: <b>Der Club</b>. 125
+                    Jahre geprägt von unvergesslichen Spielern, legendären
+                    Momenten und einer einzigartigen Geschichte. Nun hast du die
+                    Möglichkeit, deine persönliche Jahrhundert-Elf
+                    mitzugestalten!
                   </p>
                   <p>
-                    At vero eos et accusam et justo duo dolores et ea rebum.
-                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                    ipsum dolor sit amet.
+                    Für jede Dekade stehen drei herausragende Club-Legenden zur
+                    Auswahl. Wähle aus jeder Epoche den Spieler, der für dich am
+                    meisten herausragt – ob Torjäger, Mittelfeldmotor,
+                    Abwehrchef oder Torwartlegende.
+                  </p>
+                  <p>
+                    Eine Position steht bereits fest: <b>Max Morlock</b> ist als
+                    Jahrhundertspieler gesetzt. Doch wer begleitet ihn in die
+                    beste Club-Elf aller Zeiten?
                   </p>
                   <Button
                     size="lg"
@@ -146,7 +149,7 @@ export default function Home() {
                       setTimeout(() => setActiveStep((prev) => prev + 1), 500);
                     }}
                   >
-                    Jetzt starten
+                    Jetzt abstimmen
                   </Button>
                 </div>
               </Stepper.Step>
@@ -190,11 +193,12 @@ export default function Home() {
                                   src={`/players/${player.name}.jpg`}
                                   layout="fill"
                                   objectFit="cover"
+                                  sizes="(max-width: 768px) 100vw, (max-width: 1440px) 33vw, 480px"
                                   className="transition-transform duration-300 group-hover:scale-105"
                                 />
                               </div>
                               <h3 className="sm:text-xl text-center p-4">
-                                {player.name}
+                                {player.given} {player.name}
                               </h3>
                             </div>
                           );

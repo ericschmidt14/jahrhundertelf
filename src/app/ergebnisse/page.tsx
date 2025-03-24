@@ -89,9 +89,9 @@ export default function Page() {
               return (
                 <Table.Tr key={year}>
                   <Table.Td>
-                    <i className="text-xl dimmed">{year}</i>
+                    <i className="text-xl dimmed">{year}er</i>
                   </Table.Td>
-                  {sortedPlayers.map(({ name }, index) => (
+                  {sortedPlayers.map(({ name, given }, index) => (
                     <Table.Td key={name}>
                       <div className="flex items-center gap-2">
                         {index === 0 && (
@@ -108,7 +108,7 @@ export default function Page() {
                               "text-[var(--mantine-color-orange-6)]"
                             }`}
                           >
-                            {name}
+                            {given} {name}
                           </h3>
                           <p
                             className={`${
