@@ -55,8 +55,9 @@ export default function Home() {
   const BackButton = () => {
     return (
       <Button
+        size="lg"
         variant="transparent"
-        leftSection={<IconChevronLeft size={16} />}
+        leftSection={<IconChevronLeft size={20} />}
         onClick={() => {
           setIsGoingForward(false);
           setTimeout(() => setActiveStep(activeStep - 1), 100);
@@ -99,7 +100,7 @@ export default function Home() {
       case "success":
         return (
           <div className="flex flex-col items-center p-8">
-            <p>Die Umfrage wurde vollständig beantwortet.</p>
+            <p>Wir haben deine Auswahl erhalten.</p>
             <p>
               <b>Vielen Dank!</b>
             </p>
@@ -119,7 +120,7 @@ export default function Home() {
               }}
             >
               <Stepper.Step>
-                <div className="max-w-[480px] m-auto flex flex-col gap-8 p-8">
+                <div className="max-w-[480px] m-auto flex flex-col gap-8 p-4 md:p-8">
                   <h2 className="text-2xl md:text-4xl font-bold text-center">
                     Liebes Club-Mitglied,
                   </h2>
@@ -139,7 +140,8 @@ export default function Home() {
                     ipsum dolor sit amet.
                   </p>
                   <Button
-                    leftSection={<IconPlayerPlay size={16} />}
+                    size="lg"
+                    leftSection={<IconPlayerPlay size={20} />}
                     onClick={() => {
                       setIsGoingForward(true);
                       setTimeout(() => setActiveStep((prev) => prev + 1), 500);
@@ -220,7 +222,8 @@ export default function Home() {
                   <div className="flex flex-col-reverse justify-center gap-2">
                     <BackButton />
                     <Button
-                      leftSection={<IconSend size={16} />}
+                      size="lg"
+                      leftSection={<IconSend size={20} />}
                       onClick={handleSubmit}
                     >
                       Auswahl abschicken
@@ -235,7 +238,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center p-8">
+    <div className="flex flex-col items-center p-4 md:p-8">
       <div className="w-full max-w-[1440px] mx-auto">
         <header className="flex justify-center items-center gap-4">
           <Logo />
