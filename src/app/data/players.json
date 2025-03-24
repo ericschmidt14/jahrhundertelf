@@ -1,29 +1,113 @@
 [
   {
-    "year": 1900,
+    "year": 1920,
     "players": [
       {
-        "name": "Player A"
+        "name": "Stuhlfauth"
       },
       {
-        "name": "Player B"
+        "name": "Kalb"
       },
       {
-        "name": "Player C"
+        "name": "Sutor"
       }
     ]
   },
   {
-    "year": 1920,
+    "year": 1930,
     "players": [
       {
-        "name": "Player D"
+        "name": "Übelein"
       },
       {
-        "name": "Player E"
+        "name": "Billmann"
       },
       {
-        "name": "Player F"
+        "name": "Oehm"
+      }
+    ]
+  },
+  {
+    "year": 1940,
+    "players": [
+      {
+        "name": "Kennemann"
+      },
+      {
+        "name": "Schaffer"
+      },
+      {
+        "name": "Gebhardt"
+      }
+    ]
+  },
+  {
+    "year": 1950,
+    "players": [
+      {
+        "name": "Wabra"
+      },
+      {
+        "name": "Wenauer"
+      },
+      {
+        "name": "Strehl"
+      }
+    ]
+  },
+  {
+    "year": 1960,
+    "players": [
+      {
+        "name": "Müller"
+      },
+      {
+        "name": "Leupold"
+      },
+      {
+        "name": "Volkert"
+      }
+    ]
+  },
+  {
+    "year": 1970,
+    "players": [
+      {
+        "name": "Nüssing"
+      },
+      {
+        "name": "Eder"
+      },
+      {
+        "name": "Beierlorzer"
+      }
+    ]
+  },
+  {
+    "year": 1980,
+    "players": [
+      {
+        "name": "Eckstein"
+      },
+      {
+        "name": "Brunner"
+      },
+      {
+        "name": "Hintermaier"
+      }
+    ]
+  },
+  {
+    "year": 1990,
+    "players": [
+      {
+        "name": "Köpke"
+      },
+      {
+        "name": "Wiesinger"
+      },
+      {
+        "name": "Oechler"
       }
     ]
   },
@@ -31,13 +115,27 @@
     "year": 2000,
     "players": [
       {
-        "name": "Player G"
+        "name": "Wolf"
       },
       {
-        "name": "Player H"
+        "name": "Mintal"
       },
       {
-        "name": "Player I"
+        "name": "Schäfer"
+      }
+    ]
+  },
+  {
+    "year": 2010,
+    "players": [
+      {
+        "name": "Pinola"
+      },
+      {
+        "name": "Behrens"
+      },
+      {
+        "name": "Valentini"
       }
     ]
   }

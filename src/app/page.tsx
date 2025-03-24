@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import Logo from "./components/logo";
 import StepperIndicator from "./components/stepper";
 import decades from "./data/players.json";
-import { getDecade } from "./lib/utils";
 
 export default function Home() {
   const searchParams = useSearchParams();
@@ -163,7 +162,7 @@ export default function Home() {
                       className="flex flex-col gap-8"
                     >
                       <i className="text-4xl md:text-8xl text-center dimmed">
-                        {getDecade(decade.year)}
+                        {decade.year}er
                       </i>
                       <div className="grid sm:grid-cols-3 gap-4">
                         {decade.players.map((player) => {
@@ -188,7 +187,7 @@ export default function Home() {
                               <div className="relative w-full aspect-video sm:aspect-square overflow-hidden">
                                 <Image
                                   alt={`Bild ${player.name}`}
-                                  src="/players/1.png"
+                                  src={`/players/${player.name}.jpg`}
                                   layout="fill"
                                   objectFit="cover"
                                   className="transition-transform duration-300 group-hover:scale-105"
@@ -212,9 +211,17 @@ export default function Home() {
                     Deine Auswahl
                   </h2>
                   <ul className="flex flex-col items-center gap-4">
+                    <li className="flex flex-col items-center">
+                      <i className="text-[var(--mantine-color-orange-9)]">
+                        Jahrhunderspieler
+                      </i>
+                      <h3 className="text-xl text-[var(--mantine-color-orange-6)]">
+                        Morlock
+                      </h3>
+                    </li>
                     {Object.entries(selectedPlayers).map(([decade, player]) => (
                       <li key={decade} className="flex flex-col items-center">
-                        <i className="dimmed">{getDecade(+decade)}</i>
+                        <i className="dimmed">{decade}er</i>
                         <h3 className="text-xl">{player}</h3>
                       </li>
                     ))}
