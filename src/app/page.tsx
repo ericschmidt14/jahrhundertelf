@@ -134,22 +134,31 @@ export default function Home() {
                     Liebes Club-Mitglied,
                   </h2>
                   <p>
-                    Es gibt viel Clubs, aber nur einer ist: <b>Der Club</b>. 125
-                    Jahre geprägt von unvergesslichen Spielern, legendären
-                    Momenten und einer einzigartigen Geschichte. Nun hast du die
-                    Möglichkeit, deine persönliche Jahrhundert-Elf
-                    mitzugestalten!
+                    125 Jahre FCN. Was für eine Geschichte. Die goldenen 20er
+                    Jahre. Die Titel in den 60ern. Die Dramen in den 70ern und
+                    80ern. Der Absturz in den 90ern, beantwortet mit dem
+                    Durchmarsch, um dann, dramatischer als je ein anderer
+                    Verein, wieder abzusteigen. Und wenig später feiern wir den
+                    Pokalsieg 2007. 125 Jahre FCN eben.
                   </p>
                   <p>
-                    Für jede Dekade stehen drei herausragende Club-Legenden zur
-                    Auswahl. Wähle aus jeder Epoche den Spieler, der für dich am
-                    meisten herausragt – ob Torjäger, Mittelfeldmotor,
-                    Abwehrchef oder Torwartlegende.
+                    Gemeinsam mit Dir bestimmen wir die Jahrhundert+25-Elf.
+                    Dabei geht es weder um die besten Elf oder die
+                    erfolgreichsten Elf. Ziel ist es, ein Team
+                    zusammenzustellen, das die 125-jährige Geschichte des 1. FC
+                    Nürnberg abbildet. Und weil die Geschichte des 1. FC
+                    Nürnberg ohne Max Morlock nicht vorstellbar ist, ist der
+                    Weltmeister von 1954 natürlich gesetzt.
                   </p>
                   <p>
-                    Eine Position steht bereits fest: <b>Max Morlock</b> ist als
-                    Jahrhundertspieler gesetzt. Doch wer begleitet ihn in die
-                    beste Club-Elf aller Zeiten?
+                    Für jede Dekade ab den 1920ern stellen wir Dir drei
+                    herausragende Legenden zur Wahl. Wähle aus jeder Epoche den
+                    Spieler, der für Dich am meisten herausragt. Mitmachen lohnt
+                    sich natürlich. Unter allen teilnehmenden Mitgliedern
+                    verlosen wir tolle Preise, darunter Tickets, Fanartikel und
+                    ein Wochenende im Hotel Drei Raben – natürlich in der
+                    Club-Suite, die mit den Bildern der Jahrhundert+25-Elf neu
+                    gestaltet werden wird.
                   </p>
                   <Button
                     size="lg"

@@ -6,7 +6,7 @@ import Footer from "./components/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "1. FCN Jahrhundert-Elf",
+  title: "1. FCN Jahrhundert+25-Elf",
   description: "",
 };
 

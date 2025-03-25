@@ -10,7 +10,7 @@ export default function Logo() {
         alt="1. FCN Logo"
       />
       <h1 className="text-2xl">
-        Jahrhundert<i>Elf</i>
+        Jahrhundert+25<i>Elf</i>
       </h1>
     </div>
   );
