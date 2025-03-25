@@ -28,8 +28,8 @@ export default function Page() {
           setResults(data);
 
           const counts: { [key: string]: number } = {};
-          data.forEach(({ players }: { players: string[] }) => {
-            players.forEach((player) => {
+          data.forEach(({ spieler }: { spieler: string[] }) => {
+            spieler.forEach((player) => {
               counts[player] = (counts[player] || 0) + 1;
             });
           });
@@ -169,6 +169,7 @@ export default function Page() {
             <Table>
               <Table.Thead>
                 <Table.Tr>
+                  <Table.Th>Mitglied</Table.Th>
                   <Table.Th>Token</Table.Th>
                   <Table.Th>Spieler</Table.Th>
                 </Table.Tr>
@@ -176,8 +177,16 @@ export default function Page() {
               <Table.Tbody>
                 {currentPageData.map((result) => (
                   <Table.Tr key={result.token}>
+                    <Table.Td>
+                      <p>
+                        <b>
+                          {result.vorname} {result.nachname}
+                        </b>
+                      </p>
+                      <p className="dimmed">{result.email}</p>
+                    </Table.Td>
                     <Table.Td className="font-mono">{result.token}</Table.Td>
-                    <Table.Td>{result.players.join(", ")}</Table.Td>
+                    <Table.Td>{result.spieler.join(", ")}</Table.Td>
                   </Table.Tr>
                 ))}
               </Table.Tbody>
