@@ -61,15 +61,15 @@ export default function Page() {
 
   const filteredResults =
     results &&
-    results
-      .filter((r) => {
-        const keywords = search.toLowerCase().split(" ");
+    results.filter((r) => {
+      const keywords = search.toLowerCase().split(" ");
 
-        return keywords.every((keyword) =>
-          [r.token].some((value) => value.toLowerCase().includes(keyword))
-        );
-      })
-      .reverse();
+      return keywords.every((keyword) =>
+        [r.token || "", r.nachname || "", r.vorname || "", r.email || ""].some(
+          (value) => value.toLowerCase().includes(keyword)
+        )
+      );
+    });
 
   const pageLimit = 25;
   const pageSize = pageLimit ? +pageLimit : 25;

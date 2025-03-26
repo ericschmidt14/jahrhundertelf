@@ -26,6 +26,8 @@ export default function Home() {
       .then((data) => {
         if (data === 500) {
           setStatus("error");
+        } else if (data === 404) {
+          setStatus("noMember");
         } else if (data === 200) {
           setStatus("alreadyAnswered");
         } else {
@@ -54,10 +56,24 @@ export default function Home() {
   };
 
   const handleSubmit = () => {
-    console.log(
-      JSON.stringify({ players: Object.values(selectedPlayers) }, null, 2)
-    );
-    setStatus("success");
+    fetch(`/api/token/${token}`, {
+      method: "POST",
+      body: JSON.stringify(
+        { spieler: Object.values(selectedPlayers) },
+        null,
+        2
+      ),
+    })
+      .then((res) => res.status)
+      .then((data) => {
+        if (data === 200) {
+          setStatus("success");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        setStatus("error");
+      });
   };
 
   const BackButton = () => {
@@ -77,6 +93,16 @@ export default function Home() {
     );
   };
 
+  const contact = () => {
+    return (
+      <p>
+        Bitte klicke den Link in der E-Mail erneut. Sollte der Fehler weiterhin
+        bestehen bleiben, kontaktiere{" "}
+        <a href="mitglied@fcn.de">mitglied@fcn.de</a>.
+      </p>
+    );
+  };
+
   const renderContent = () => {
     switch (status) {
       case "loading":
@@ -93,6 +119,18 @@ export default function Home() {
               Ein Fehler ist aufgetreten:{" "}
               <b>{token ? "Ungültiges Token" : "Kein Token vorhanden"}.</b>
             </p>
+            {contact()}
+          </div>
+        );
+
+      case "noMember":
+        return (
+          <div className="flex flex-col items-center p-8">
+            <p>
+              Ein Fehler ist aufgetreten:{" "}
+              <b>Dem Token konnte kein Mitglied zugeordnet werden.</b>
+            </p>
+            {contact()}
           </div>
         );
 
@@ -109,7 +147,7 @@ export default function Home() {
       case "success":
         return (
           <div className="flex flex-col items-center p-8">
-            <p>Wir haben deine Auswahl erhalten.</p>
+            <p>Wir haben Deine Auswahl erhalten.</p>
             <p>
               <b>Vielen Dank!</b>
             </p>

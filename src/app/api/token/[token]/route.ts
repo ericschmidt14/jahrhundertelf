@@ -14,9 +14,11 @@ export async function GET(
     },
     cache: "no-store",
   });
-  const data = res.status === 200 ? await res.json() : await res.text();
+  const data = res.status === 200 ? await res.json() : {};
 
-  return NextResponse.json(data, { status: res.status });
+  return NextResponse.json(data, {
+    status: res.status === 204 ? 202 : res.status,
+  });
 }
 
 export async function POST(
