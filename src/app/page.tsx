@@ -247,7 +247,10 @@ export default function Home() {
                               <div className="relative w-full aspect-square overflow-hidden">
                                 <Image
                                   alt={`Bild ${player.name}`}
-                                  src={`/players/${player.name}.jpg`}
+                                  src={`/players/${player.name.replaceAll(
+                                    /[äöü]/g,
+                                    ""
+                                  )}.jpg`}
                                   layout="fill"
                                   objectFit="cover"
                                   sizes="(max-width: 768px) 100vw, (max-width: 1440px) 33vw, 480px"
