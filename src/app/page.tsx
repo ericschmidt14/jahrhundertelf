@@ -1,6 +1,11 @@
 "use client";
 import { Button, Loader, Stepper } from "@mantine/core";
-import { IconChevronLeft, IconPlayerPlay, IconSend } from "@tabler/icons-react";
+import {
+  IconChevronLeft,
+  IconPlayerPlay,
+  IconSend,
+  IconTicket,
+} from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/legacy/image";
 import { useSearchParams } from "next/navigation";
@@ -8,6 +13,7 @@ import { useEffect, useState } from "react";
 import Logo from "./components/logo";
 import StepperIndicator from "./components/stepper";
 import decades from "./data/players.json";
+import { ONLINE_SHOP_LINK } from "./lib/constants";
 
 export default function Home() {
   const searchParams = useSearchParams();
@@ -98,7 +104,7 @@ export default function Home() {
       <p>
         Bitte klicke den Link in der E-Mail erneut. Sollte der Fehler weiterhin
         bestehen bleiben, kontaktiere{" "}
-        <a href="mitglied@fcn.de">mitglied@fcn.de</a>.
+        <a href="mailto:mitglied@fcn.de">mitglied@fcn.de</a>.
       </p>
     );
   };
@@ -146,11 +152,23 @@ export default function Home() {
 
       case "success":
         return (
-          <div className="flex flex-col items-center p-8">
-            <p>Wir haben Deine Auswahl erhalten.</p>
-            <p>
-              <b>Vielen Dank!</b>
+          <div className="max-w-[460px] m-auto flex flex-col items-center gap-4 p-8">
+            <h3 className="text-center">
+              Wir haben Deine Auswahl erhalten. Vielen Dank!
+            </h3>
+            <p className="text-center">
+              Übrigens: Am 4. Mai steigt unsere große Geburtstagsfeier rund um
+              das Heimspiel gegen die SV Elversberg. Sei dabei und nutze den
+              aktuell laufenden exklusiven Mitgliedervorverkauf.
             </p>
+            <Button
+              component="a"
+              size="lg"
+              href={ONLINE_SHOP_LINK}
+              leftSection={<IconTicket size={20} />}
+            >
+              Hier geht’s zum Onlineshop
+            </Button>
           </div>
         );
 
