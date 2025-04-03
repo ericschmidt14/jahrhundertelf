@@ -8,7 +8,9 @@
       },
       {
         "name": "Stuhlfauth",
-        "given": "Heinrich"
+        "given": "Heinrich",
+        "won": true,
+        "votes": 4924
       },
       {
         "name": "Sutor",
@@ -21,7 +23,9 @@
     "players": [
       {
         "name": "Uebelein",
-        "given": "Hans"
+        "given": "Hans",
+        "won": true,
+        "votes": 2766
       },
       {
         "name": "Billmann",
@@ -42,7 +46,9 @@
       },
       {
         "name": "Schaffer",
-        "given": "Edi"
+        "given": "Edi",
+        "won": true,
+        "votes": 3544
       },
       {
         "name": "Gebhardt",
@@ -59,7 +65,9 @@
       },
       {
         "name": "Strehl",
-        "given": "Heinz"
+        "given": "Heinz",
+        "won": true,
+        "votes": 3613
       },
       {
         "name": "Wenauer",
@@ -80,7 +88,9 @@
       },
       {
         "name": "Volkert",
-        "given": "Georg"
+        "given": "Georg",
+        "won": true,
+        "votes": 2243
       }
     ]
   },
@@ -93,7 +103,9 @@
       },
       {
         "name": "Nüssing",
-        "given": "Dieter"
+        "given": "Dieter",
+        "won": true,
+        "votes": 4482
       },
       {
         "name": "Beierlorzer",
@@ -106,7 +118,9 @@
     "players": [
       {
         "name": "Eckstein",
-        "given": "Dieter"
+        "given": "Dieter",
+        "won": true,
+        "votes": 4532
       },
       {
         "name": "Brunner",
@@ -123,7 +137,9 @@
     "players": [
       {
         "name": "Köpke",
-        "given": "Andreas"
+        "given": "Andreas",
+        "won": true,
+        "votes": 4853
       },
       {
         "name": "Wiesinger",
@@ -140,7 +156,9 @@
     "players": [
       {
         "name": "Mintal",
-        "given": "Marek"
+        "given": "Marek",
+        "won": true,
+        "votes": 5274
       },
       {
         "name": "Wolf",
@@ -158,7 +176,9 @@
     "players": [
       {
         "name": "Pinola",
-        "given": "Javier"
+        "given": "Javier",
+        "won": true,
+        "votes": 4736
       },
       {
         "name": "Behrens",
